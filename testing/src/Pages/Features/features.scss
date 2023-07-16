@@ -1,0 +1,18 @@
+.nav{
+    &-link{
+        text-decoration: none;
+        color: black;
+        svg {
+            color: black;
+        }
+        &.active{
+           background-color: rgb(84, 119, 185);
+           display: block;
+           color: white;
+           svg {
+            color: white;
+        }
+        }
+    }
+   
+}

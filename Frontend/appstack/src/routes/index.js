@@ -25,6 +25,7 @@ import SignUp from "../pages/auth/SignUp";
 import ResetPassword from "../pages/auth/ResetPassword";
 import Page404 from "../pages/auth/Page404";
 import Page500 from "../pages/auth/Page500";
+import Travel from "../pages/auth/Travel";
 
 // Layouts
 import Boxed from "../pages/layouts/Boxed";
@@ -235,6 +236,11 @@ const authRoutes = {
       path: "/auth/sign-in",
       name: "Sign In",
       component: SignIn,
+    },
+    {
+      path: "/auth/travel",
+      name: "Travel",
+      component: Travel,
     },
     {
       path: "/auth/sign-up",
