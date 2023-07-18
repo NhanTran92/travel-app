@@ -1,0 +1,114 @@
+.a{
+    text-decoration: none;
+    width: 278px;
+}
+
+.container {
+    width: 1320px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 270px;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+.footer {
+    
+    text-align: left;
+    width: 278px;
+    height: 328px;
+    gap: 10px;
+   
+}
+.info {
+    
+    text-align: left;
+    width: 330px;
+    height: 365px;
+    gap: 10px;
+
+   .form{
+
+    display: flex;
+
+    .securi{
+        text-align: left;
+        width: 260px;
+        height: 30px;
+        flex-direction: column;
+        
+        .img{
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    .payment {
+       
+        text-align: right;
+    }
+   }
+   
+}
+
+
+   
+    .menu{
+        display: flex;
+        text-align: left;
+        list-style-type: none;
+        text-decoration: none;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        flex-wrap: wrap;
+        .li{
+            width: 50%;
+            height: 240;
+            text-align: left;
+            text-decoration: none;
+        }
+       
+}   
+ 
+
+
+.mb-app {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.footer .block.contact-block {
+    font-weight: 300;
+    line-height: 30px;
+}
+
+.footer .block {
+    margin-bottom: 40px;
+}
+
+.socials{
+    display: flex;
+    list-style-type: none;
+    padding-left: 0px;
+    flex-wrap: wrap;
+    .li{
+        text-align: left;
+    }
+}
+
+.input{
+    width: 332px;
+    height: 40px;
+}
+
+
+
