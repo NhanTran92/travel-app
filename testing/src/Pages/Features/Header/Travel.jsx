@@ -9,13 +9,13 @@ export default function Travel() {
   };
 
   return (
-    <div>
+    <div >
       <div className={`style ${currentMenu === 'menu1' ? 'active' : ''}`} onClick={() => handleClick('menu1')}>
-        <h3 className="li">Du lịch trong nước</h3>
+        <h3 className="menu" style={{ cursor: "pointer"}}>Du lịch trong nước</h3>
       </div>
 
       {currentMenu === 'menu1' && (
-        <div className="menu">
+        <div className="container" >
           <ul>
             <li>Menu item 1</li>
             <li>Menu item 2</li>
@@ -25,11 +25,11 @@ export default function Travel() {
       )}
 
       <div className={`style ${currentMenu === 'menu2' ? 'active' : ''}`} onClick={() => handleClick('menu2')}>
-        <h3 className="li">Du lịch nước ngoài</h3>
+        <h3 className="menu" style={{ cursor: "pointer"}}>Du lịch nước ngoài</h3>
       </div>
 
       {currentMenu === 'menu2' && (
-        <div className="menu">
+        <div className="container">
           <ul>
             <li>Menu item A</li>
             <li>Menu item B</li>
