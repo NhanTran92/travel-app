@@ -1,0 +1,26 @@
+
+   .container {
+    width: 1320px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 270px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    list-style-type: none;
+    text-align: left;
+    color: blue;
+    .li{
+        padding: 10px;
+       }
+  }
+
+  .style{
+    list-style-type: none;
+    text-align: left;
+    color: blue;
+   .li{
+    padding: 10px;
+   }
+}

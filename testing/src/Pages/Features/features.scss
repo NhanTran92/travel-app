@@ -57,7 +57,71 @@
     -ms-flex-pack: justify;
     justify-content: space-between;
 }
+ .a{
+    text-decoration : none;
+    color: black;
+ }
 
-header {
-    display: block;
-}
+ // Khuyến mãi
+ .slide-in-promotion {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    transition: left 0.3s ease;
+    background-color: white;
+    width: 1860px;
+    height: 500px;
+  }
+  
+  .slide-in-promotion.active {
+    left: 0;
+  }
+
+  // Tin tức
+  .slide-in-news {
+    position: absolute;
+    left: 600px;
+    top: 100%;
+    transition: left 0.3s ease;
+    background-color: white;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .slide-in-news.active {
+    left: 0;
+  }
+
+
+  // Vận chuyển
+  .slide-in-transport {
+    position: absolute;
+    left: 450px;
+    top: 100%;
+    transition: left 0.3s ease;
+    background-color: white;
+    width: 150px;
+    height: 100px;
+  }
+  
+  .slide-in-news.transport {
+    left: 0;
+  }
+
+  // Du lịch
+
+  .slide-in-travel {
+   
+    position: absolute;
+    left: 0px;
+    top: 100%;
+    transition: left 0.3s ease;
+    background-color: white;
+    width: 1860px;
+    height: 500px;
+   
+  }
+  
+  .slide-in-news.travel {
+    left: 0;
+  }

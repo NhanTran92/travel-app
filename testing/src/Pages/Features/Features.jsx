@@ -224,6 +224,13 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import "./features.scss"
 import { Outlet } from 'react-router-dom';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import Promotion from './Header/Promotion';
+import News from './Header/News';
+import Transport from './Header/Transport';
+import Travel from './Header/Travel';
+
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -362,11 +369,57 @@ export default function PrimarySearchAppBar() {
     </Menu>
   );
  
+ // Hiện menu khi click vào Du lịch ở header
+    const [isOpenMenu, setIsMenuOpen] = React.useState(false);
+  
+    const toggleMenu = () => {
+      setIsMenuOpen(!isMenuOpen);
+    };
+
+    const closeMenu = () => {
+      setIsMenuOpen(false);
+    };
+
+
+    // Vận chuyển
+    const [isOpenMenuTransport, setIsMenuOpenTransport] = React.useState(false);
+  
+    const toggleMenuTransport = () => {
+      setIsMenuOpenTransport(!isOpenMenuTransport);
+    };
+
+    const closeMenuTranssport = () => {
+      setIsMenuOpenTransport(false);
+    };
+
+    // Tin tức
+
+    const [isOpenMenuNews, setIsMenuOpenNews] = React.useState(false);
+  
+    const toggleMenuNews = () => {
+      setIsMenuOpenNews(!isOpenMenuNews);
+    };
+
+    const closeMenuNews = () => {
+      setIsMenuOpenNews(false);
+    };
+
+    // Khuyến mãi
+    const [isOpenMenuPromotion, setIsMenuOpenPromotion] = React.useState(false);
+  
+    const toggleMenuPromotion = () => {
+      setIsMenuOpenPromotion(!isOpenMenuPromotion);
+    };
+
+    const closeMenuPromotion = () => {
+      setIsMenuOpenPromotion(false);
+    };
+
 
   return (
     <Box sx={{ flexGrow: 12 }}>
       <AppBar  position="static" color="">
-      <Toolbar>
+      <Toolbar >
       <Typography
             variant="h6"
             noWrap
@@ -387,11 +440,19 @@ export default function PrimarySearchAppBar() {
               noWrap
               component="div"
               sx={{ display: { xs: 'none', sm: 'block' } }}
-              style={{padding:"20px"}} 
-             
+              style={{padding:"20px",cursor: 'pointer', position: 'relative'}} 
+              onClick={isOpenMenu ? closeMenu : toggleMenu}
             >
               Du lịch
+                {isOpenMenu ? (
+                  <ExpandLessIcon style={{ marginLeft: '5px' }} />
+                    ) : (
+                      <ArrowDropDownIcon style={{ marginLeft: '5px' }} />
+                    )}
             </Typography>
+            {isOpenMenu && <div className="slide-in-travel">
+          <Travel />
+        </div>}
             <Typography
               variant="h6"
               noWrap
@@ -399,34 +460,73 @@ export default function PrimarySearchAppBar() {
               sx={{ display: { xs: 'none', sm: 'block' } }}
               style={{padding:"20px" , left:"20px"}} 
             >
-              Vietravel MICE
+              <a className='a' href='https://vietravelmice.com/'> Vietravel MICE</a>
+             
             </Typography>
             <Typography
               variant="h6"
               noWrap
               component="div"
               sx={{ display: { xs: 'none', sm: 'block' } }}
-              style={{padding:"20px" , left:"20px"}} 
+              style={{padding:"20px" , left:"20px",cursor: 'pointer', position: 'relative'}} 
+              onClick={isOpenMenuTransport ? closeMenuTranssport : toggleMenuTransport}
             >
               Vận Chuyển
+              {isOpenMenuTransport ? (
+                  <ExpandLessIcon style={{ marginLeft: '5px' }} />
+                    ) : (
+                      <ArrowDropDownIcon style={{ marginLeft: '5px' }} />
+                    )}
             </Typography>
+            {isOpenMenuTransport && <div className="slide-in-transport">
+          <Transport />
+        </div>}
             <Typography
               variant="h6"
               noWrap
               component="div"
               sx={{ display: { xs: 'none', sm: 'block' } }}
-              style={{padding:"20px" , left:"20px"}} 
+              style={{padding:"20px" , left:"20px",cursor: 'pointer', position: 'relative'}} 
+              onClick={isOpenMenuNews ? closeMenuNews : toggleMenuNews}
             >
-              Tin Tức
+             Tin Tức
+             {isOpenMenuNews ? (
+                  <ExpandLessIcon style={{ marginLeft: '5px' }} />
+                    ) : (
+                      <ArrowDropDownIcon style={{ marginLeft: '5px' }} />
+                    )}
+             
             </Typography>
+            {isOpenMenuNews && <div className="slide-in-news">
+          <News />
+        </div>}
             <Typography
               variant="h6"
               noWrap
               component="div"
               sx={{ display: { xs: 'none', sm: 'block' } }}
-              style={{padding:"20px" , left:"20px"}} 
+              style={{padding:"20px" , left:"20px" ,cursor: 'pointer', position: 'relative'}} 
+              onClick={isOpenMenuPromotion ? closeMenuPromotion : toggleMenuPromotion}
             >
               Khuyến Mãi
+              {isOpenMenuPromotion ? (
+                  <ExpandLessIcon style={{ marginLeft: '5px' }} />
+                    ) : (
+                      <ArrowDropDownIcon style={{ marginLeft: '5px' }} />
+                    )}
+            </Typography>
+            {isOpenMenuPromotion && <div className="slide-in-promotion">
+          <Promotion />
+        </div>}
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{ display: { xs: 'none', sm: 'block' } }}
+              style={{padding:"20px" , left:"20px"}} 
+            >
+              <a className="a" href='https://vietravelplus.com/'> VietravelPlus</a>
+             
             </Typography>
             <Typography
               variant="h6"
@@ -435,16 +535,7 @@ export default function PrimarySearchAppBar() {
               sx={{ display: { xs: 'none', sm: 'block' } }}
               style={{padding:"20px" , left:"20px"}} 
             >
-              VietravelPlus
-            </Typography>
-            <Typography
-              variant="h6"
-              noWrap
-              component="div"
-              sx={{ display: { xs: 'none', sm: 'block' } }}
-              style={{padding:"20px" , left:"20px"}} 
-            >
-              Liên Hệ
+              <a className='a' href='https://travel.com.vn/lien-he.aspx'> Liên Hệ</a>
             </Typography>
           </Box>
 
@@ -484,6 +575,7 @@ export default function PrimarySearchAppBar() {
               <MoreIcon />
             </IconButton>
           </Box>
+          
         </Toolbar>
        
       </AppBar>
@@ -493,3 +585,4 @@ export default function PrimarySearchAppBar() {
     </Box>
   );
 }
+
