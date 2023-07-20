@@ -450,7 +450,7 @@ export default function PrimarySearchAppBar() {
                       <ArrowDropDownIcon style={{ marginLeft: '5px' }} />
                     )}
             </Typography>
-            {isOpenMenu && <div className="slide-in-travel">
+            {isOpenMenu && <div className="slide-in-travel ">
           <Travel />
         </div>}
             <Typography

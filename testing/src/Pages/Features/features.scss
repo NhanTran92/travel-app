@@ -60,6 +60,17 @@
     background-color: white;
     width: 1860px;
     height: 500px;
+    text-align: left;
+    border: 1px solid red;
+    .ul{
+      padding: 50px;
+      color: rgb(17, 154, 233);
+    }
+    .li{
+      padding: 10px;
+      list-style-type: none;
+      color: rgb(94, 160, 199);
+    }
    
   }
   
