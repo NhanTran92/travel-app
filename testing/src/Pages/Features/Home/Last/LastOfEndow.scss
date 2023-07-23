@@ -1,0 +1,106 @@
+.container-last{
+    display: flex;
+    justify-content: space-between;
+    width: 1320px;
+    height: 800px;
+    padding-left: 300px;
+  }
+  
+  .box {
+    width: calc((1320px - 40px) / 3);
+    height: 707px; // Đặt chiều cao mong muốn cho khung
+    margin-right: 20px;
+    background-color: #f0f0f0;
+    display: flex;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    
+    
+    &:last-child {
+      margin-right: 0; // Loại bỏ khoảng cách bên phải của khung cuối cùng
+    }
+  }
+
+  .box:hover {
+    background-color: #fff;
+    transform: translateY(-5px); /* Nhảy lên 5px khi hover */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Hiệu ứng bóng đổ */
+  }
+
+  .image {
+    width: 400px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #ccc; /* Đặt hình ảnh của bạn ở đây */
+    margin-bottom: 10px;
+  }
+  
+  .text {
+
+    text-align: left;
+    font-size: 15px;
+
+  
+  }
+
+  .title{
+    text-align: left;
+    color: #2d4271;
+    font-size: 18px;
+    height: 90px;
+  }
+
+
+  .last-4 {
+    width: 1296px;
+    margin-bottom: 1.5rem!important;
+    text-align: left;
+    color: #2d4271;
+    font-size: 30px;
+    padding-left: 300px;
+  }
+
+  .p{
+    text-align: left;
+    height: 20px;
+  }
+
+  .code{
+    height: 40px;
+   
+  }
+
+  .price{
+    height: 200px;
+    text-align: left;
+      .cost{
+        text-align: left;
+        text-decoration: line-through;
+      }
+  }
+
+  .newcost{
+    width: 350px;
+    color: red;
+    margin-left: 10px;
+  }
+
+  .span{
+    height: 42px;
+    display: flex;
+  }
+
+  .discount{
+    padding-top: 12px;
+    margin-right: 10px;
+    width: 70px;
+    height: 30px;
+    background-color: red;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+  }
+
+ 

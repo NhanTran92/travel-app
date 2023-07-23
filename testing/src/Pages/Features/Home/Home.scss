@@ -10,17 +10,20 @@
     color: blue;
     flex-direction: row;
     padding: 30px;
-    .discover{
-      text-align: left;
-      width: 200px;
-      height: 160px;
-      padding: 30px;
-    }
-    .header{
-        text-align: left;
-        color: rgb(30, 206, 191);
-      }
+   
+   
       
+  }
+  .header{
+    text-align: left;
+    color: rgb(30, 206, 191);
+  }
+
+  .discover{
+    text-align: left;
+    width: 200px;
+    height: 160px;
+    padding: 30px;
   }
 
   

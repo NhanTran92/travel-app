@@ -1,0 +1,47 @@
+.slide {
+    width: 1296px;
+    padding-top: 40px;
+    padding-left: 300px;
+    overflow: hidden;
+  
+    .images-container {
+      display: flex;
+      transition: transform 0.3s ease;
+    }
+  
+    .image {
+      flex: 0 0 calc(100% / 3);
+      height: 300px;
+      object-fit: cover;
+      padding: 20px;
+    }
+  
+    .active {
+      border: 2px solid red;
+    }
+  
+    .navigation {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+  
+      button {
+        font-size: 24px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        margin: 0 10px;
+        outline: none;
+      }
+    }
+  }
+
+
+.sl-4 {
+    width: 1296px;
+    margin-bottom: 1.5rem!important;
+    text-align: left;
+    color: #2d4271;
+    font-size: 30px;
+  }
+  
