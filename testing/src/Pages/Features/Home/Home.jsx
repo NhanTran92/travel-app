@@ -3,6 +3,9 @@ import HomeOfFooter from './HomeOfFooter/HomeOfFooter'
 import DiscoverTravel from './DiscoverTravel/DiscoverTravel'
 import Endow from "./Endow/Endow"
 import LastOfEndow from "./Last/LastOfEndow"
+import Special from './Special/Special'
+import Favourite from './Favourite/Favourite'
+import Reason from './Reason/Reason'
 
 export default function Home() {
   return (
@@ -11,6 +14,9 @@ export default function Home() {
      <div><Endow/></div>
      <div className='header'><DiscoverTravel/></div>
      <div><LastOfEndow/></div>
+     <div><Special/></div>
+     <div><Favourite/></div>
+     <div><Reason/></div>
      <HomeOfFooter/>
     
     </div>
