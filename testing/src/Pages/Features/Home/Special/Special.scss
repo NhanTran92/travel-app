@@ -24,14 +24,15 @@ $box-height: 400px;
     &:nth-child(2n) {
       margin-right: $padding;
     }
-    .image {
+   
+    .box-inner {
+      height: $box-height;
+      .image {
         width: 400px;
         height: auto;
         background-color: white;
         text-align: left;
     }
-    .box-inner {
-      height: $box-height;
       &:first-child {
         width: $box1-width;
         margin-right: $padding;

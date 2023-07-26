@@ -10,7 +10,8 @@ export default function Special() {
     <div class="box">
       <div class="box-inner">
         <div className='image'><img src='https://media.travel.com.vn/Combo/s_img_28062023_94ac12e0-d115-4b69-afcc-0bbe43758e96_Untitled.webp'>
-        </img></div>
+        </img>
+        </div>
       </div>
       <div class="box-inner"></div>
     </div>
@@ -18,7 +19,12 @@ export default function Special() {
 
 
     <div class="box">
-      <div class="box-inner"></div>
+      <div class="box-inner">
+      <div className='image'><img src='https://media.travel.com.vn/Combo/s_img_28062023_94ac12e0-d115-4b69-afcc-0bbe43758e96_Untitled.webp'>
+        </img>
+        </div>
+
+      </div>
       <div class="box-inner"></div>
     </div>
   </div>
