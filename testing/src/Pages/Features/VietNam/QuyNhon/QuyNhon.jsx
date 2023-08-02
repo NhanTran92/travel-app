@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMinus, faPlus,faEnvelope ,faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faMinus, faPlus,faEnvelope ,faPhone,faCalendar,faPlane,faStar,faUserGroup } from '@fortawesome/free-solid-svg-icons';
 import "./QuyNhon.scss"
 import HomeOfFooter from '../../Home/HomeOfFooter/HomeOfFooter';
 
@@ -345,6 +345,8 @@ export default function QuyNhon() {
 
         </div>
       </div>
+
+
       <div className="right-box">
 
       <p style={{textAlign : "left"}}>Quý khách cần hỗ trợ ? </p>
@@ -363,6 +365,115 @@ export default function QuyNhon() {
 
       <h2 style={{textAlign : "left"}}>Tóm tắt đặt chỗ</h2>
       <p style={{textAlign : "left"}}>Chuyến bay (358 du khách)</p>
+      <div className="flight-info-container">
+      <div className="left-section">
+      <div className='calendar'>
+       <FontAwesomeIcon icon={faCalendar}/>
+       <p></p>
+      </div>
+
+      <div className='pan'>
+      <span >Khởi hành - T3, 15 Tháng 8 2023</span>
+      <p >SGN  <FontAwesomeIcon icon={faPlane} />    QN</p>
+      <p >Vietravel Airlines</p>
+      </div>
+
+      <div className='img'><img src='https://media.travel.com.vn/ImageAirlines/logo_VIETRAVELAIRLINES.png'></img>
+      </div>
+       
+      </div>
+    </div>
+
+    <div className="flight-info-container">
+    <div className="left-section">
+    <div className='calendar'>
+     <FontAwesomeIcon icon={faCalendar}/>
+    </div>
+
+    <div className='pan'>
+    <span >Khởi hành - T5, 17 Tháng 8 2023</span>
+    <p >QN  <FontAwesomeIcon icon={faPlane} />    SGN</p>
+    <p >Vietravel Airlines</p>
+    </div>
+
+    <div className='img'><img src='https://media.travel.com.vn/ImageAirlines/logo_VIETRAVELAIRLINES.png'></img>
+    </div>
+     
+    </div>
+  </div>
+      
+      <p style={{textAlign : "left"}}>Khách sạn Quy Nhơn</p>
+
+      <div className='hotel'>
+      <div style={{textAlign : "left"}}>
+      <img style={{width : "150px" ,height : "100px"}} src='https://media.travel.com.vn/Combo/img_28062023_94ac12e0-d115-4b69-afcc-0bbe43758e96_Untitled.png'></img>
+      </div>
+      <div style={{textAlign : "left"}}>
+        <span>
+        <FontAwesomeIcon icon={faStar} style={{color: "#ddc10e",}} />
+        <FontAwesomeIcon icon={faStar} style={{color: "#ddc10e",}} />
+        <FontAwesomeIcon icon={faStar} style={{color: "#ddc10e",}} />
+        <FontAwesomeIcon icon={faStar} style={{color: "#ddc10e",}} />
+        <FontAwesomeIcon icon={faStar} style={{color: "#ddc10e",}} />
+        </span>
+        <p >Combo 3N2Đ Wyndham Grand Phú Quốc (Vinoasis) 5 sao: Vé máy bay khứ hồi + Phòng Standard + Ăn sáng + Khám phá Vinpearl Safari </p>
+      </div>
+ 
+      </div>
+
+    <div class="passenger-info">
+  <div class="passenger-row">
+    <span class="passenger-label">Hành khách</span>
+    <span class="icon"><FontAwesomeIcon icon={faUserGroup} /></span>
+  </div>
+  <div class="passenger-row">
+    <span>1 người lớn</span>
+    <span>1 x 5,490,000₫</span>
+  </div>
+  <div class="passenger-row">
+    <span>0 trẻ em</span>
+    <span>0₫</span>
+  </div>
+  <div class="passenger-row">
+    <span>0 trẻ nhỏ</span>
+    <span>0₫</span>
+  </div>
+  <div class="passenger-row">
+    <span>0 em bé</span>
+    <span>0₫</span>
+  </div>
+
+  <div class="passenger-row">
+  <span class="promo-label">Phụ thu phòng riêng</span>
+  <span>0₫</span>
+</div>
+
+<div class="passenger-row">
+<span class="promo-label">Khuyến mãi mở mùa 2023</span>
+</div>
+
+<div class="passenger-row">
+<span>Đăng nhập để nhận giảm giá tour online</span>
+</div>
+
+<div class="promotion-info">
+  <div class="promo-row">
+    <span class="promo-label">Mã giảm giá</span>
+    <div class="promo-input">
+      <input type="text" placeholder="Nhập mã giảm giá" />
+      <button class="apply-button">Áp dụng</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="summary">
+  <div class="total">TỔNG CỘNG 5,490,000₫</div>
+  <div> <button class="booking-button">Đặt ngay</button></div>
+ 
+</div>
+
+
       </div>
     </div>
     <HomeOfFooter/>
