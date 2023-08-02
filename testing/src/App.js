@@ -12,6 +12,7 @@ import SignIn from "./Pages/SignIn/SignIn";
 import ForgotPassword from "./Pages/ForgotPassword/ForgotPassword";
 import Group from "./Pages/Features/Group/Group";
 import NewPassword from "./Pages/newPassword/NewPassord";
+import QuyNhon from "./Pages/Features/VietNam/QuyNhon/QuyNhon";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "group",
         element: <Group></Group>,
+      },
+      {
+        path: "booking/quynhon",
+        element: <QuyNhon></QuyNhon>,
       },
     ],
   },

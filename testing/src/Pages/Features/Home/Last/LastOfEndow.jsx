@@ -1,5 +1,6 @@
 import React from 'react'
 import "./LastOfEndow.scss"
+import { Link } from 'react-router-dom'
 
 export default function LastOfEndow() {
 
@@ -16,7 +17,7 @@ export default function LastOfEndow() {
         <div className="box ">
           <div className='image'>  <img style={style} src='https://media.travel.com.vn/LastMinute/lm_230718035417_682512_Eo%20Gio%203.webp'></img>
           <div className='text'>03/08/2023 - 4 ngày</div>
-          <div className='title'>Quy Nhơn - Eo Gió - Kỳ Co - Phú Yên - Gành Đá Dĩa - Kích cầu du lịch</div>
+          <div className='title'><Link to={"/booking/quynhon"}>Quy Nhơn - Eo Gió - Kỳ Co - Phú Yên - Gành Đá Dĩa - Kích cầu du lịch</Link></div>
           <div className='text code'>Mã tour :
           <div> NNSGN350-003-050823CA-D</div>
           </div>
