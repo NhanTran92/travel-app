@@ -13,6 +13,7 @@ import ForgotPassword from "./Pages/ForgotPassword/ForgotPassword";
 import Group from "./Pages/Features/Group/Group";
 import NewPassword from "./Pages/newPassword/NewPassord";
 import QuyNhon from "./Pages/Features/VietNam/QuyNhon/QuyNhon";
+import Payment from "./Pages/Features/VietNam/QuyNhon/Payment/Payment";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "booking/quynhon",
         element: <QuyNhon></QuyNhon>,
+      },
+      {
+        path: "booking/quynhon/payment",
+        element: <Payment></Payment>,
       },
     ],
   },
