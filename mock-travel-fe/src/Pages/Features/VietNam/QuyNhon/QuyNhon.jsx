@@ -132,7 +132,7 @@ export default function QuyNhon() {
   
   return (
     <div>
-      <div className='qn'>1. Nhập thông tin    2. Thanh toán</div>
+      <div className='qn'><span style={{color : "blue"}}>1. Nhập thông tin  ></span>       2. Thanh toán</div>
       <div className='qnheader'>
       <div className='img'>
         <img className='img' src='https://media.travel.com.vn/tour/tfd_230317043554_485930.jpg'></img>
