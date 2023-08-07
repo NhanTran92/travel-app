@@ -13,7 +13,7 @@ public interface IHotelRepository extends JpaRepository<Hotel, Integer> {
 
     Hotel findHotelByName(String hotelName);
 
-    Hotel findHotelByAddress(String address);
+    List<Hotel> findHotelByAddress(String address);
 
     List<Hotel> getAllHotels();
 

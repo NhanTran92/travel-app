@@ -5,38 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ae86f142-c24b-47b3-8cde-ae8a16db4f74" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/dto/FlightDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/dto/HotelDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/dto/LocationDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/dto/MomoPaymentDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/dto/OrderDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/dto/PaymentDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/dto/TourDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/dto/UserDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/dto/VNPaymentDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/entity/Booking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/entity/Flight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/entity/Hotel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/entity/Location.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/entity/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/entity/OrderStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/entity/Tour.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/entity/UserStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/entity/payment/MomoPayment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/entity/payment/Payment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/entity/payment/VNPayment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/repository/IBookingRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/repository/IFlightRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/repository/IHotelRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/repository/ILocationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/repository/IOrderRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/repository/IPaymentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/repository/ITourRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/repository/IUserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/service/IUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/service/BookingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/service/FlightService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/service/HotelService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/service/LocationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/service/PaymentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/service/interfaceService/IBookingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/service/interfaceService/IFlightService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/service/interfaceService/ILocationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/service/interfaceService/IPaymentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travelapp/repository/IHotelRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/repository/IHotelRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travelapp/repository/ILocationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/repository/ILocationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travelapp/repository/IPaymentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/repository/IPaymentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travelapp/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travelapp/service/TourService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/service/TourService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/travelapp/service/interfaceService/IHotelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/travelapp/service/interfaceService/IHotelService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
