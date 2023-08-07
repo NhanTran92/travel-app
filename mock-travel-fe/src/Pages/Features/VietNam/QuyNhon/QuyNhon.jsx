@@ -6,16 +6,55 @@ import HomeOfFooter from '../../Home/HomeOfFooter/HomeOfFooter';
 
 export default function QuyNhon() {
 
+  const money = 5490000;
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [address, setAddress] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleAddressChange = (e) => {
+    setAddress(e.target.value);
+  };
+
+  const handlePhoneNumberChange = (e) => {
+    setPhoneNumber(e.target.value);
+  };
+
+
   const [age, setAge] = useState(0);
 
   const handleIncrement = () => {
     setAge(age + 1);
+    setPrice((prevTotal) => prevTotal +  money);
+   
   };
 
   const handleDecrement = () => {
     setAge(age - 1);
+    setPrice((prevTotal) => prevTotal - money);
   };
 
+  const [young, setYoung] = useState(0);
+
+  const handleIncrementYoung = () => {
+    setYoung(young + 1);
+    setPriceOfYoung((prevTotal) => prevTotal +  (money/2));
+  
+  };
+
+  const handleDecrementYoung = () => {
+    setYoung(young - 1);
+    setPriceOfYoung((prevTotal) => prevTotal -  (money/2));
+  };
   const [children, setChildren] = useState(0);
 
   const handleIncrementChildren = () => {
@@ -35,17 +74,6 @@ export default function QuyNhon() {
   const handleDecrementBaby = () => {
     setBaby(baby - 1);
   };
-
-  const [young, setYoung] = useState(0);
-
-  const handleIncrementYoung = () => {
-    setYoung(young + 1);
-  };
-
-  const handleDecrementYoung = () => {
-    setYoung(young - 1);
-  };
-
 
   const [salutation, setSalutation] = useState('Ông');
   const [fullName, setFullName] = useState('');
@@ -92,6 +120,16 @@ export default function QuyNhon() {
     setSelectedOptionRoom(room);
   };
   
+  const [price, setPrice] = useState(0);
+
+  const [priceOfYoung, setPriceOfYoung] = useState(0);
+
+  const [total, setTotal] = useState(0);
+
+  React.useEffect(() => {
+    setTotal(price + priceOfYoung);
+  }, [price, priceOfYoung]);
+  
   return (
     <div>
       <div className='qn'>1. Nhập thông tin    2. Thanh toán</div>
@@ -118,15 +156,44 @@ export default function QuyNhon() {
       <div className="flex-container">
       <div className="left-container">
       <div > <h3 style={{textAlign:'left'}}>Thông tin liên lạc</h3></div>
-        <div className="left-box">
+        <div className="left-box1">
           {/* Khung 1 */}
           <div className="form-column">
-        <input type="text" placeholder="Họ và tên" />
-        <input type="email" placeholder="Email" />
+          <label htmlFor="fullName">Họ và tên <span>*</span></label>
+          <input
+          type="text"
+          id="fullName"
+          placeholder="Nhập họ và tên"
+          value={fullName}
+          onChange={handleNameChange}
+        />
+
+        <label htmlFor="email">Email <span>*</span></label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Nhập email"
+          value={email}
+          onChange={handleEmailChange}
+        />
       </div>
       <div className="form-column">
-        <input type="text" placeholder="Địa chỉ" />
-        <input type="text" placeholder="Số điện thoại" />
+      <label htmlFor="address">Địa chỉ:</label>
+      <input
+        type="text"
+        id="address"
+        placeholder="Nhập địa chỉ"
+        value={address}
+        onChange={handleAddressChange}
+      />
+      <label htmlFor="phoneNumber">Số điện thoại <span>*</span></label>
+      <input
+        type="tel"
+        id="phoneNumber"
+        placeholder="Nhập số điện thoại"
+        value={phoneNumber}
+        onChange={handlePhoneNumberChange}
+      />
       </div>
         </div>
 
@@ -427,19 +494,19 @@ export default function QuyNhon() {
     <span class="icon"><FontAwesomeIcon icon={faUserGroup} /></span>
   </div>
   <div class="passenger-row">
-    <span>1 người lớn</span>
-    <span>1 x 5,490,000₫</span>
+    <span>{age} người lớn</span>
+    <span>{price}đ</span>
   </div>
   <div class="passenger-row">
-    <span>0 trẻ em</span>
+    <span>{young} trẻ em</span>
+    <span>{priceOfYoung}₫</span>
+  </div>
+  <div class="passenger-row">
+    <span>{children} trẻ nhỏ</span>
     <span>0₫</span>
   </div>
   <div class="passenger-row">
-    <span>0 trẻ nhỏ</span>
-    <span>0₫</span>
-  </div>
-  <div class="passenger-row">
-    <span>0 em bé</span>
+    <span>{baby} em bé</span>
     <span>0₫</span>
   </div>
 
@@ -468,7 +535,7 @@ export default function QuyNhon() {
 </div>
 
 <div class="summary">
-  <div class="total">TỔNG CỘNG 5,490,000₫</div>
+  <div class="total">TỔNG CỘNG {total}đ</div>
   <div> <button class="booking-button">Đặt ngay</button></div>
  
 </div>

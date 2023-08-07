@@ -74,6 +74,13 @@
             background-color: rgb(71, 71, 71);
             display: flex;
           }
+          .left-box1 {
+            width: 800px;
+            height: 250px;
+            margin: 5px;
+            background-color: rgb(71, 71, 71);
+            display: flex;
+          }
           .left-box2 {
             width: 800px;
             height: 100px;
@@ -88,8 +95,15 @@
             background-color: rgb(223, 217, 217);
           }
 
+          &.important {
+            span {
+              color: red;
+              margin-left: 5px;
+            }
+
           
       }
+    }
 
       .form-column {
         display: flex;
