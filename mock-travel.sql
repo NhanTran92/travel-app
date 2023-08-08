@@ -18,9 +18,9 @@ CREATE TABLE `Users` (
   phone_number 			VARCHAR(255) NOT NULL,
   address				VARCHAR(255),
   card_id				VARCHAR(255) NOT NULL UNIQUE,
-  role 					ENUM('admin', 'employee', 'user') NOT NULL,
-  created_date			DATETIME NOT NULL,
-  updated_at			DATETIME NOT NULL
+  role 					ENUM('admin', 'employee', 'user') NOT NULL
+  #created_date			DATETIME NOT NULL,
+  #updated_at			DATETIME NOT NULL
 );
 
 DROP TABLE IF EXISTS  `Tours`;
@@ -30,7 +30,8 @@ CREATE TABLE Tours (
   description 			TEXT,
   price 				DECIMAL(10, 2),
   duration 				INT,
-  location				VARCHAR(255)
+  thumbnail_url			TEXT NOT NULL,
+  destination				VARCHAR(255)
 );
 
 DROP TABLE IF EXISTS Hotels;
@@ -47,11 +48,10 @@ CREATE TABLE Hotels (
 DROP TABLE IF EXISTS Flights;
 CREATE TABLE Flights (
   flight_id 			INT AUTO_INCREMENT PRIMARY KEY,
-  flight_number			VARCHAR(255) NOT NULL,
+  flight_code			VARCHAR(255) NOT NULL,
   airline 				VARCHAR(255),
   departure_date 		DATETIME,
   arrival_date 			DATETIME,
-  origin 				VARCHAR(255),
   destination 			VARCHAR(255),
   price 				DECIMAL(10, 2)
 );
@@ -64,6 +64,7 @@ CREATE TABLE Bookings (
   flight_id 			INT,
   hotel_id 				INT,
   booking_date 			DATETIME,
+  total_amount			DOUBLE,
   status 				ENUM('pending', 'confirmed', 'cancelled') NOT NULL,
   FOREIGN KEY (user_id) REFERENCES users(user_id),
   FOREIGN KEY (tour_id) REFERENCES tours(tour_id),
@@ -71,6 +72,14 @@ CREATE TABLE Bookings (
   FOREIGN KEY (hotel_id) REFERENCES hotels(hotel_id)
 );
 
+DROP TABLE IF EXISTS  `Payments`;
+CREATE TABLE Payments (
+	payment_id			INT AUTO_INCREMENT PRIMARY KEY,
+    booking_id			INT,
+    payment_date		DATETIME,
+    amount				DOUBLE,
+    payment_method		ENUM('VNPAY','MOMOPAY') NOT NULL
+);
 -- Create table Registration_User_Token
 DROP TABLE IF EXISTS 	`Registration_User_Token`;
 CREATE TABLE IF NOT EXISTS `Registration_User_Token` (
